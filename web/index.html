@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>ESP32 Skleník – nahrání firmware</title>
+
+  <script
+    type="module"
+    src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js">
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f4;
+      color: #1f2d1f;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .box {
+      background: white;
+      max-width: 600px;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #245c38;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: 22px;
+      padding: 16px 28px;
+      border: none;
+      border-radius: 14px;
+      background: #3a9b5f;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2f814f;
+    }
+
+    .note {
+      margin-top: 25px;
+      font-size: 15px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>ESP32 Skleník</h1>
+
+    <p>
+      Připoj ESP32 k počítači přes USB, klikni na tlačítko
+      a vyber správný sériový port.
+    </p>
+
+    <esp-web-install-button manifest="manifest.json">
+      <button slot="activate">Nahrát firmware do ESP32</button>
+    </esp-web-install-button>
+
+    <p class="note">
+      Funguje v prohlížeči Chrome nebo Edge. Firefox obvykle Web Serial nepodporuje.
+    </p>
+  </div>
+</body>
+</html>
