@@ -1,0 +1,15 @@
+{
+  "name": "ESP32 Skleník",
+  "version": "1.0",
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "firmware/merged-firmware.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
